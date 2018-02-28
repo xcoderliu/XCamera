@@ -121,8 +121,10 @@
 		F81E3850204301B3006A2C76 /* XCamera */ = {
 			isa = PBXGroup;
 			children = (
+				F8A2598C2046B5900041162E /* customclasses */,
 				F81E3892204467AD006A2C76 /* functions */,
 				F81E3851204301B3006A2C76 /* AppDelegate.swift */,
+				F81E389520446B26006A2C76 /* XCaptureMetadataOutput.swift */,
 				F81E3882204301DB006A2C76 /* XCameraViewController.swift */,
 				F81E3855204301B3006A2C76 /* Main.storyboard */,
 				F81E385B204301B3006A2C76 /* Assets.xcassets */,
@@ -164,14 +166,20 @@
 		F81E3892204467AD006A2C76 /* functions */ = {
 			isa = PBXGroup;
 			children = (
-				F81888D92045671100E34501 /* UIEx.swift */,
 				F81E3890204465D5006A2C76 /* CapturePhoto.swift */,
 				F81E388E204462B2006A2C76 /* QRCode.swift */,
 				F81E3893204469AB006A2C76 /* Face.swift */,
-				F81E389520446B26006A2C76 /* XCaptureMetadataOutput.swift */,
 				F8A2598A2046B2800041162E /* Focus.swift */,
 			);
 			path = functions;
+			sourceTree = "<group>";
+		};
+		F8A2598C2046B5900041162E /* customclasses */ = {
+			isa = PBXGroup;
+			children = (
+				F81888D92045671100E34501 /* UIEx.swift */,
+			);
+			path = customclasses;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

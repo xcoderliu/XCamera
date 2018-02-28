@@ -13,10 +13,13 @@ extension XCameraViewController {
     func initFaceUI() {
         // 初始化 face Frame 来突显 脸部
         faceFrameView = UIViewEx()
-        faceFrameView?.layer.borderColor = UIColor.yellow.cgColor
-        faceFrameView?.layer.borderWidth = 2
-        self.view.addSubview(faceFrameView!)
-        self.view.bringSubview(toFront: faceFrameView!)
+        if let _ = faceFrameView
+        {
+            faceFrameView?.layer.borderColor = UIColor.yellow.cgColor
+            faceFrameView?.layer.borderWidth = 2
+            self.view.addSubview(faceFrameView!)
+            self.view.bringSubview(toFront: faceFrameView!)
+        }
     }
     
     func handleFace (metaFaceObj:AVMetadataFaceObject) {

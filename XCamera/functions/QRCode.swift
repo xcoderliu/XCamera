@@ -13,10 +13,13 @@ extension XCameraViewController {
     func initQRView() {
         // 初始化 QR Code Frame 来突显 QR code
         qrCodeFrameView = UIViewEx()
-        qrCodeFrameView?.layer.borderColor = UIColor.green.cgColor
-        qrCodeFrameView?.layer.borderWidth = 2
-        self.view.addSubview(qrCodeFrameView!)
-        self.view.bringSubview(toFront: qrCodeFrameView!)
+        if let _ = qrCodeFrameView
+        {
+            qrCodeFrameView?.layer.borderColor = UIColor.green.cgColor
+            qrCodeFrameView?.layer.borderWidth = 2
+            self.view.addSubview(qrCodeFrameView!)
+            self.view.bringSubview(toFront: qrCodeFrameView!)
+        }
         
         // 初始化 messageLabel 来显示 QR code
         messageLabel.backgroundColor = UIColor.clear

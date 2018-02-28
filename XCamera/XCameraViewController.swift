@@ -17,6 +17,7 @@ let animateDuration = 0.2
 class XCameraViewController: UIViewController {
     //公共
     let disposeBag = DisposeBag()
+    var captureDevice: AVCaptureDevice?
     
     //avfoundation
     var captureMetaQueue: DispatchQueue?
@@ -54,9 +55,13 @@ class XCameraViewController: UIViewController {
     }
     
     func initCamera() {
-        let captureDevice = AVCaptureDevice.default(for: .video)
         do {
-            
+            captureDevice = AVCaptureDevice.default(for: .video)
+            try? captureDevice?.lockForConfiguration()
+            captureDevice?.focusMode = .continuousAutoFocus
+            captureDevice?.exposureMode = .continuousAutoExposure
+            captureDevice?.unlockForConfiguration()
+
             //获取输入设备
             let input = try AVCaptureDeviceInput(device: captureDevice!)
             captureSession = AVCaptureSession()
@@ -100,6 +105,7 @@ class XCameraViewController: UIViewController {
         initCapturePhotoUI()
         initQRView()
         initFaceUI()
+        initFocus()
     }
     
 }

@@ -9,7 +9,7 @@
 import UIKit
 import AVFoundation
 
-extension CameraViewController {
+extension XCameraViewController {
     func initFaceUI() {
         // 初始化 face Frame 来突显 脸部
         faceFrameView = UIViewEx()

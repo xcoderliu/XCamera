@@ -9,7 +9,7 @@
 import UIKit
 import AVFoundation
 
-extension CameraViewController : AVCaptureMetadataOutputObjectsDelegate {
+extension XCameraViewController : AVCaptureMetadataOutputObjectsDelegate {
     func metadataOutput(_ captureOutput: AVCaptureMetadataOutput,
                         didOutput metadataObjects: [AVMetadataObject],
                         from connection: AVCaptureConnection) {

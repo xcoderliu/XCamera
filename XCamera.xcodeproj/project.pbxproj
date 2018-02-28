@@ -15,7 +15,7 @@
 		F81E385F204301B3006A2C76 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F81E385D204301B3006A2C76 /* LaunchScreen.storyboard */; };
 		F81E386A204301B3006A2C76 /* XCameraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81E3869204301B3006A2C76 /* XCameraTests.swift */; };
 		F81E3875204301B4006A2C76 /* XCameraUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81E3874204301B4006A2C76 /* XCameraUITests.swift */; };
-		F81E3883204301DB006A2C76 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81E3882204301DB006A2C76 /* CameraViewController.swift */; };
+		F81E3883204301DB006A2C76 /* XCameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81E3882204301DB006A2C76 /* XCameraViewController.swift */; };
 		F81E38892043071D006A2C76 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F81E38862043071D006A2C76 /* RxCocoa.framework */; };
 		F81E388A2043071D006A2C76 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F81E38872043071D006A2C76 /* SnapKit.framework */; };
 		F81E388B2043071D006A2C76 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F81E38882043071D006A2C76 /* RxSwift.framework */; };
@@ -58,7 +58,7 @@
 		F81E3870204301B4006A2C76 /* XCameraUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XCameraUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F81E3874204301B4006A2C76 /* XCameraUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCameraUITests.swift; sourceTree = "<group>"; };
 		F81E3876204301B4006A2C76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F81E3882204301DB006A2C76 /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		F81E3882204301DB006A2C76 /* XCameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCameraViewController.swift; sourceTree = "<group>"; };
 		F81E38862043071D006A2C76 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		F81E38872043071D006A2C76 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
 		F81E38882043071D006A2C76 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
@@ -123,7 +123,7 @@
 			children = (
 				F81E3892204467AD006A2C76 /* functions */,
 				F81E3851204301B3006A2C76 /* AppDelegate.swift */,
-				F81E3882204301DB006A2C76 /* CameraViewController.swift */,
+				F81E3882204301DB006A2C76 /* XCameraViewController.swift */,
 				F81E3855204301B3006A2C76 /* Main.storyboard */,
 				F81E385B204301B3006A2C76 /* Assets.xcassets */,
 				F81E385D204301B3006A2C76 /* LaunchScreen.storyboard */,
@@ -333,7 +333,7 @@
 				F81E385A204301B3006A2C76 /* XCamera.xcdatamodeld in Sources */,
 				F81E3891204465D5006A2C76 /* CapturePhoto.swift in Sources */,
 				F81E3852204301B3006A2C76 /* AppDelegate.swift in Sources */,
-				F81E3883204301DB006A2C76 /* CameraViewController.swift in Sources */,
+				F81E3883204301DB006A2C76 /* XCameraViewController.swift in Sources */,
 				F81E389620446B26006A2C76 /* XCaptureMetadataOutput.swift in Sources */,
 				F81E3894204469AB006A2C76 /* Face.swift in Sources */,
 				F81E388F204462B2006A2C76 /* QRCode.swift in Sources */,

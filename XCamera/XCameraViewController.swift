@@ -14,7 +14,7 @@ import RxSwift
 
 let animateDuration = 0.2
 
-class CameraViewController: UIViewController {
+class XCameraViewController: UIViewController {
     //公共
     let disposeBag = DisposeBag()
     

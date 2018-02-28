@@ -9,7 +9,7 @@
 import UIKit
 import AVFoundation
 
-extension CameraViewController {
+extension XCameraViewController {
     func initQRView() {
         // 初始化 QR Code Frame 来突显 QR code
         qrCodeFrameView = UIViewEx()

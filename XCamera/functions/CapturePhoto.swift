@@ -9,7 +9,7 @@
 import UIKit
 import AVFoundation
 
-extension CameraViewController {
+extension XCameraViewController {
     func initCapturePhotoUI() {
         //capture btn setup
         btnCapture.backgroundColor = UIColor.white
@@ -45,7 +45,7 @@ extension CameraViewController {
     }
 }
 
-extension CameraViewController : AVCapturePhotoCaptureDelegate {
+extension XCameraViewController : AVCapturePhotoCaptureDelegate {
     func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
         guard let imageData = photo.fileDataRepresentation() else {
             return

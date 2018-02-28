@@ -7,14 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F81888DA2045671100E34501 /* UIEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81888D92045671100E34501 /* UIEx.swift */; };
 		F81E3852204301B3006A2C76 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81E3851204301B3006A2C76 /* AppDelegate.swift */; };
-		F81E3854204301B3006A2C76 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81E3853204301B3006A2C76 /* ViewController.swift */; };
 		F81E3857204301B3006A2C76 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F81E3855204301B3006A2C76 /* Main.storyboard */; };
 		F81E385A204301B3006A2C76 /* XCamera.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F81E3858204301B3006A2C76 /* XCamera.xcdatamodeld */; };
 		F81E385C204301B3006A2C76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F81E385B204301B3006A2C76 /* Assets.xcassets */; };
 		F81E385F204301B3006A2C76 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F81E385D204301B3006A2C76 /* LaunchScreen.storyboard */; };
 		F81E386A204301B3006A2C76 /* XCameraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81E3869204301B3006A2C76 /* XCameraTests.swift */; };
 		F81E3875204301B4006A2C76 /* XCameraUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81E3874204301B4006A2C76 /* XCameraUITests.swift */; };
+		F81E3883204301DB006A2C76 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81E3882204301DB006A2C76 /* CameraViewController.swift */; };
+		F81E38892043071D006A2C76 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F81E38862043071D006A2C76 /* RxCocoa.framework */; };
+		F81E388A2043071D006A2C76 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F81E38872043071D006A2C76 /* SnapKit.framework */; };
+		F81E388B2043071D006A2C76 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F81E38882043071D006A2C76 /* RxSwift.framework */; };
+		F81E388F204462B2006A2C76 /* QRCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81E388E204462B2006A2C76 /* QRCode.swift */; };
+		F81E3891204465D5006A2C76 /* CapturePhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81E3890204465D5006A2C76 /* CapturePhoto.swift */; };
+		F81E3894204469AB006A2C76 /* Face.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81E3893204469AB006A2C76 /* Face.swift */; };
+		F81E389620446B26006A2C76 /* XCaptureMetadataOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81E389520446B26006A2C76 /* XCaptureMetadataOutput.swift */; };
+		F8A2598B2046B2800041162E /* Focus.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A2598A2046B2800041162E /* Focus.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,9 +44,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F81888D92045671100E34501 /* UIEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIEx.swift; sourceTree = "<group>"; };
 		F81E384E204301B3006A2C76 /* XCamera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XCamera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F81E3851204301B3006A2C76 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F81E3853204301B3006A2C76 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F81E3856204301B3006A2C76 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F81E3859204301B3006A2C76 /* XCamera.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = XCamera.xcdatamodel; sourceTree = "<group>"; };
 		F81E385B204301B3006A2C76 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +58,15 @@
 		F81E3870204301B4006A2C76 /* XCameraUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XCameraUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F81E3874204301B4006A2C76 /* XCameraUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCameraUITests.swift; sourceTree = "<group>"; };
 		F81E3876204301B4006A2C76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F81E3882204301DB006A2C76 /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		F81E38862043071D006A2C76 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
+		F81E38872043071D006A2C76 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
+		F81E38882043071D006A2C76 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		F81E388E204462B2006A2C76 /* QRCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCode.swift; sourceTree = "<group>"; };
+		F81E3890204465D5006A2C76 /* CapturePhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapturePhoto.swift; sourceTree = "<group>"; };
+		F81E3893204469AB006A2C76 /* Face.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Face.swift; sourceTree = "<group>"; };
+		F81E389520446B26006A2C76 /* XCaptureMetadataOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCaptureMetadataOutput.swift; sourceTree = "<group>"; };
+		F8A2598A2046B2800041162E /* Focus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Focus.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +74,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F81E38892043071D006A2C76 /* RxCocoa.framework in Frameworks */,
+				F81E388A2043071D006A2C76 /* SnapKit.framework in Frameworks */,
+				F81E388B2043071D006A2C76 /* RxSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +104,7 @@
 				F81E3868204301B3006A2C76 /* XCameraTests */,
 				F81E3873204301B4006A2C76 /* XCameraUITests */,
 				F81E384F204301B3006A2C76 /* Products */,
+				F81E38852043071C006A2C76 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,8 +121,9 @@
 		F81E3850204301B3006A2C76 /* XCamera */ = {
 			isa = PBXGroup;
 			children = (
+				F81E3892204467AD006A2C76 /* functions */,
 				F81E3851204301B3006A2C76 /* AppDelegate.swift */,
-				F81E3853204301B3006A2C76 /* ViewController.swift */,
+				F81E3882204301DB006A2C76 /* CameraViewController.swift */,
 				F81E3855204301B3006A2C76 /* Main.storyboard */,
 				F81E385B204301B3006A2C76 /* Assets.xcassets */,
 				F81E385D204301B3006A2C76 /* LaunchScreen.storyboard */,
@@ -128,6 +151,29 @@
 			path = XCameraUITests;
 			sourceTree = "<group>";
 		};
+		F81E38852043071C006A2C76 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F81E38862043071D006A2C76 /* RxCocoa.framework */,
+				F81E38882043071D006A2C76 /* RxSwift.framework */,
+				F81E38872043071D006A2C76 /* SnapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F81E3892204467AD006A2C76 /* functions */ = {
+			isa = PBXGroup;
+			children = (
+				F81888D92045671100E34501 /* UIEx.swift */,
+				F81E3890204465D5006A2C76 /* CapturePhoto.swift */,
+				F81E388E204462B2006A2C76 /* QRCode.swift */,
+				F81E3893204469AB006A2C76 /* Face.swift */,
+				F81E389520446B26006A2C76 /* XCaptureMetadataOutput.swift */,
+				F8A2598A2046B2800041162E /* Focus.swift */,
+			);
+			path = functions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,6 +184,7 @@
 				F81E384A204301B3006A2C76 /* Sources */,
 				F81E384B204301B3006A2C76 /* Frameworks */,
 				F81E384C204301B3006A2C76 /* Resources */,
+				F81E388420430225006A2C76 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -257,14 +304,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		F81E388420430225006A2C76 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SnapKit.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F81E384A204301B3006A2C76 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F81E3854204301B3006A2C76 /* ViewController.swift in Sources */,
+				F8A2598B2046B2800041162E /* Focus.swift in Sources */,
+				F81888DA2045671100E34501 /* UIEx.swift in Sources */,
 				F81E385A204301B3006A2C76 /* XCamera.xcdatamodeld in Sources */,
+				F81E3891204465D5006A2C76 /* CapturePhoto.swift in Sources */,
 				F81E3852204301B3006A2C76 /* AppDelegate.swift in Sources */,
+				F81E3883204301DB006A2C76 /* CameraViewController.swift in Sources */,
+				F81E389620446B26006A2C76 /* XCaptureMetadataOutput.swift in Sources */,
+				F81E3894204469AB006A2C76 /* Face.swift in Sources */,
+				F81E388F204462B2006A2C76 /* QRCode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,6 +503,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SZ27WN4V96;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = XCamera/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xcoderliu.XCamera;
@@ -445,6 +522,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SZ27WN4V96;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = XCamera/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xcoderliu.XCamera;

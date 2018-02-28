@@ -8,19 +8,18 @@
 
 import UIKit
 import AVFoundation
-import SnapKit
-
 
 extension CameraViewController {
     func initCapturePhotoUI() {
         //capture btn setup
         btnCapture.backgroundColor = UIColor.white
+        btnCapture.alpha = 0.2
         self.view.addSubview(btnCapture)
         btnCapture.snp.makeConstraints { (make) in
             make.width.equalTo(2*nBtnCaptureRadius)
             make.height.equalTo(2*nBtnCaptureRadius)
             make.centerX.equalTo(self.view)
-            make.bottom.equalTo(self.view.snp.bottom).offset(-20)
+            make.bottom.equalTo(self.view.snp.bottom).offset(-60)
         }
         btnCapture.layer.cornerRadius = CGFloat(nBtnCaptureRadius)
         btnCapture.clipsToBounds = true

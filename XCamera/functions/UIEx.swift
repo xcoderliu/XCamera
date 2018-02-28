@@ -6,4 +6,8 @@
 //  Copyright © 2018 刘智民. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class UIViewEx: UIView {
+    var preCenter = CGPoint(x: 0, y: 0)
+}

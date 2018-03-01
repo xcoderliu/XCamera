@@ -29,7 +29,20 @@ extension XCameraViewController {
         }
     }
     
-    func handleFace (metaFaceObjs:[AVMetadataFaceObject]?) {
+    func checkFace(metadataObjects: [AVMetadataObject]) {
+        var faceObjs: [AVMetadataFaceObject] = []
+        for metaObj in metadataObjects {
+            if let metaFaceObj = metaObj as?
+                AVMetadataFaceObject {
+                faceObjs.append(metaFaceObj)
+            }
+        }
+        DispatchQueue.main.async {
+            self.handleFace(metaFaceObjs: faceObjs)
+        }
+    }
+    
+    private func handleFace (metaFaceObjs:[AVMetadataFaceObject]?) {
         if !bFace {
             return
         }

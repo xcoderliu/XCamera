@@ -46,9 +46,24 @@ extension XCameraViewController {
             }
         }
     }
-
     
-     func handleQr(metadataObj: AVMetadataMachineReadableCodeObject?) {
+    func checkQR(metadataObjects: [AVMetadataObject]) {
+        var isExistMRObj = false
+        for metaObj in metadataObjects {
+            if let metaMRObj = metaObj as?
+                AVMetadataMachineReadableCodeObject {
+                handleQr(metadataObj: metaMRObj)
+                isExistMRObj = true
+                break
+            }
+        }
+        if !isExistMRObj {
+            handleQr(metadataObj: nil)
+        }
+    }
+    
+    
+    private func handleQr(metadataObj: AVMetadataMachineReadableCodeObject?) {
         if !bQR
         {
             return

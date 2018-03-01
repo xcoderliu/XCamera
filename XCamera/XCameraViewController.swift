@@ -39,8 +39,7 @@ class XCameraViewController: UIViewController {
     var qrCodeFrameView: UIViewEx?
     
     // 脸部识别
-    var faceFrameView: UIViewEx?
-    
+    var faceFrameViews: [UIViewFace]?
     
     override func viewDidLoad() {
         super.viewDidLoad()

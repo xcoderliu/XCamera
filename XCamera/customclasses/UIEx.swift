@@ -11,3 +11,9 @@ import UIKit
 class UIViewEx: UIView {
     var preCenter = CGPoint(x: 0, y: 0)
 }
+
+class UIViewFace: UIViewEx {
+    var faceID: Int = 0
+    var labelTip: UILabel?
+    let imgTool = MLImageDetect()
+}

@@ -11,28 +11,99 @@ import AVFoundation
 
 extension XCameraViewController {
     func initFaceUI() {
-        // 初始化 face Frame 来突显 脸部
-        faceFrameView = UIViewEx()
-        if let _ = faceFrameView
-        {
-            faceFrameView?.layer.borderColor = UIColor.yellow.cgColor
-            faceFrameView?.layer.borderWidth = 2
-            self.view.addSubview(faceFrameView!)
-            self.view.bringSubview(toFront: faceFrameView!)
+        // 初始化 faceFrame 来突显 脸部
+        faceFrameViews = []
+    }
+    
+    func handleFace (metaFaceObjs:[AVMetadataFaceObject]?) {
+        
+        var deleteViews = [UIViewFace]()
+        var newfaceIDs = [Int]()
+        for metaFaceObj in metaFaceObjs! {
+            newfaceIDs.append(metaFaceObj.faceID)
+        }
+        
+        //排查已经存在的 faceID 不删除
+        for faceView in faceFrameViews! {
+            if !newfaceIDs.contains(faceView.faceID)
+            {
+                deleteViews.append(faceView)
+            }
+        }
+        
+        faceViewOut(faceViews: deleteViews)
+        
+        //add all face obj
+        for metaFaceObj in metaFaceObjs! {
+            let faceObject = videoPreviewLayer?.transformedMetadataObject(for: metaFaceObj)
+            handleFaceView(faceObj: faceObject as! AVMetadataFaceObject)
         }
     }
     
-    func handleFace (metaFaceObj:AVMetadataFaceObject) {
-        // If the found metadata is equal to the QR code metadata then update the status label's text and set the bounds
-        let faceObject = videoPreviewLayer?.transformedMetadataObject(for: metaFaceObj)
+    func handleFaceView(faceObj: AVMetadataFaceObject){
+        if ((faceFrameViews?.count) != nil) {
+            for faceView in faceFrameViews!
+            {
+                if faceView.faceID == faceObj.faceID
+                {
+                    //update
+                    updateFaceViewByMeta(faceView: faceView, faceObj: faceObj)
+                    return
+                }
+            }
+        }
+        addFaceView(faceObj: faceObj)
+    }
+    
+    func addFaceView(faceObj: AVMetadataFaceObject) {
+        //add view
+        let faceView = UIViewFace()
+        faceView.layer.borderColor = UIColor.yellow.cgColor
+        faceView.layer.borderWidth = 2
+        self.view.addSubview(faceView)
+        self.view.bringSubview(toFront: faceView)
+        faceView.faceID = faceObj.faceID
+        self.faceFrameViews?.append(faceView)
         
-        self.faceFrameView?.preCenter = CGPoint(x: (faceObject?.bounds.origin.x)! + (faceObject?.bounds.size.width)! / 2, y: (faceObject?.bounds.origin.y)! + (faceObject?.bounds.size.height)! / 2)
+        //labtip
+        faceView.labelTip = UILabel()
+        faceView.labelTip?.textColor = UIColor.yellow
+        faceView.clipsToBounds = true
+        faceView.addSubview(faceView.labelTip!)
+        
+        updateFaceViewByMeta(faceView: faceView, faceObj: faceObj)
+    }
+    
+    func updateFaceViewByMeta(faceView: UIViewFace,faceObj: AVMetadataFaceObject) {
+        faceView.preCenter = CGPoint(x: (faceObj.bounds.origin.x) + (faceObj.bounds.size.width) / 2, y: (faceObj.bounds.origin.y) + (faceObj.bounds.size.height) / 2)
         
         DispatchQueue.main.async {
-            self.faceFrameView?.center = (self.faceFrameView?.preCenter)!;
+            faceView.center = (faceView.preCenter);
             UIView.animate(withDuration: animateDuration, animations: {
-                self.faceFrameView?.frame = faceObject!.bounds
+                UIView.animate(withDuration: animateDuration, animations: {
+                    faceView.frame = faceObj.bounds
+                })
             })
         }
     }
+    
+    func faceViewOut(faceViews:[UIViewFace])  {
+        for faceView in faceViews {
+            DispatchQueue.main.async {
+                UIView.animate(withDuration: animateDuration, animations: {
+                    faceView.frame = CGRect(x: (faceView.preCenter.x), y: (faceView.preCenter.y), width: 0, height: 0)
+                }, completion: { _ in
+                    let deleteViews :[UIViewFace] = Array.init(faceViews)
+                    for faceView in deleteViews
+                    {
+                        faceView.removeFromSuperview()
+                        if let index = (self.faceFrameViews?.index(of: faceView )) {
+                            self.faceFrameViews?.remove(at: index)
+                        }
+                    }
+                })
+            }
+        }
+    }
+    
 }

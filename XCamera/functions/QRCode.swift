@@ -37,22 +37,41 @@ extension XCameraViewController {
         messageLabel.isHidden = true
     }
     
-    func handleQr(metadataObj: AVMetadataMachineReadableCodeObject) {
-        // If the found metadata is equal to the QR code metadata then update the status label's text and set the bounds
-        let barCodeObject = videoPreviewLayer?.transformedMetadataObject(for: metadataObj)
-        
-        self.qrCodeFrameView?.preCenter = CGPoint(x: (barCodeObject?.bounds.origin.x)! + (barCodeObject?.bounds.size.width)! / 2, y: (barCodeObject?.bounds.origin.y)! + (barCodeObject?.bounds.size.height)! / 2)
-        
-        if metadataObj.stringValue != nil {
-            DispatchQueue.main.async {
-                self.qrCodeFrameView?.center = (self.qrCodeFrameView?.preCenter)!;
-                UIView.animate(withDuration: animateDuration, animations: {
-                    self.qrCodeFrameView?.frame = barCodeObject!.bounds
-                    self.messageLabel.isHidden = false
-                    self.messageLabel.text = metadataObj.stringValue
-                })
+    func handleQr(metadataObj: AVMetadataMachineReadableCodeObject?) {
+        if metadataObj != nil
+        {
+            let barCodeObject = videoPreviewLayer?.transformedMetadataObject(for: metadataObj!)
+            
+            self.qrCodeFrameView?.preCenter = CGPoint(x: (barCodeObject?.bounds.origin.x)! + (barCodeObject?.bounds.size.width)! / 2, y: (barCodeObject?.bounds.origin.y)! + (barCodeObject?.bounds.size.height)! / 2)
+            
+            if metadataObj?.stringValue != nil {
+                DispatchQueue.main.async {
+                    self.qrCodeFrameView?.center = (self.qrCodeFrameView?.preCenter)!;
+                    UIView.animate(withDuration: animateDuration, animations: {
+                        self.qrCodeFrameView?.frame = barCodeObject!.bounds
+                        self.messageLabel.isHidden = false
+                        self.messageLabel.text = metadataObj?.stringValue
+                    })
+                }
             }
         }
+        else
+        {
+            qrViewOut()
+        }
+        
     }
-
+    
+    func qrViewOut() {
+        DispatchQueue.main.async {
+            UIView.animate(withDuration: animateDuration, animations: {
+                if self.qrCodeFrameView?.frame.size.width != 0 && self.qrCodeFrameView?.frame.size.height != 0
+                {
+                    self.qrCodeFrameView?.frame = CGRect(x: (self.qrCodeFrameView?.preCenter.x)!, y: (self.qrCodeFrameView?.preCenter.y)!, width: 0, height: 0)
+                    self.messageLabel.isHidden = true
+                }
+            })
+        }
+    }
+    
 }

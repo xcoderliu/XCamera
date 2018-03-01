@@ -24,6 +24,8 @@
 		F81E3894204469AB006A2C76 /* Face.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81E3893204469AB006A2C76 /* Face.swift */; };
 		F81E389620446B26006A2C76 /* XCaptureMetadataOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81E389520446B26006A2C76 /* XCaptureMetadataOutput.swift */; };
 		F8A2598B2046B2800041162E /* Focus.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A2598A2046B2800041162E /* Focus.swift */; };
+		F8A259A42047F1A50041162E /* MLImageDetect.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A259A22047F1A50041162E /* MLImageDetect.swift */; };
+		F8A259A52047F1A50041162E /* Inceptionv3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = F8A259A32047F1A50041162E /* Inceptionv3.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,8 @@
 		F81E3893204469AB006A2C76 /* Face.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Face.swift; sourceTree = "<group>"; };
 		F81E389520446B26006A2C76 /* XCaptureMetadataOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCaptureMetadataOutput.swift; sourceTree = "<group>"; };
 		F8A2598A2046B2800041162E /* Focus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Focus.swift; sourceTree = "<group>"; };
+		F8A259A22047F1A50041162E /* MLImageDetect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MLImageDetect.swift; sourceTree = "<group>"; };
+		F8A259A32047F1A50041162E /* Inceptionv3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Inceptionv3.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,7 +128,6 @@
 				F8A2598C2046B5900041162E /* customclasses */,
 				F81E3892204467AD006A2C76 /* functions */,
 				F81E3851204301B3006A2C76 /* AppDelegate.swift */,
-				F81E389520446B26006A2C76 /* XCaptureMetadataOutput.swift */,
 				F81E3882204301DB006A2C76 /* XCameraViewController.swift */,
 				F81E3855204301B3006A2C76 /* Main.storyboard */,
 				F81E385B204301B3006A2C76 /* Assets.xcassets */,
@@ -166,10 +169,13 @@
 		F81E3892204467AD006A2C76 /* functions */ = {
 			isa = PBXGroup;
 			children = (
+				F81E389520446B26006A2C76 /* XCaptureMetadataOutput.swift */,
 				F81E3890204465D5006A2C76 /* CapturePhoto.swift */,
 				F81E388E204462B2006A2C76 /* QRCode.swift */,
 				F81E3893204469AB006A2C76 /* Face.swift */,
 				F8A2598A2046B2800041162E /* Focus.swift */,
+				F8A259A22047F1A50041162E /* MLImageDetect.swift */,
+				F8A259A32047F1A50041162E /* Inceptionv3.mlmodel */,
 			);
 			path = functions;
 			sourceTree = "<group>";
@@ -336,6 +342,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8A259A52047F1A50041162E /* Inceptionv3.mlmodel in Sources */,
 				F8A2598B2046B2800041162E /* Focus.swift in Sources */,
 				F81888DA2045671100E34501 /* UIEx.swift in Sources */,
 				F81E385A204301B3006A2C76 /* XCamera.xcdatamodeld in Sources */,
@@ -343,6 +350,7 @@
 				F81E3852204301B3006A2C76 /* AppDelegate.swift in Sources */,
 				F81E3883204301DB006A2C76 /* XCameraViewController.swift in Sources */,
 				F81E389620446B26006A2C76 /* XCaptureMetadataOutput.swift in Sources */,
+				F8A259A42047F1A50041162E /* MLImageDetect.swift in Sources */,
 				F81E3894204469AB006A2C76 /* Face.swift in Sources */,
 				F81E388F204462B2006A2C76 /* QRCode.swift in Sources */,
 			);

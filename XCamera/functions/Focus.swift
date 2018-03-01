@@ -37,9 +37,9 @@ extension XCameraViewController {
         //设置焦点
         try? captureDevice?.lockForConfiguration()
         captureDevice?.focusPointOfInterest = itrPoint
-        captureDevice?.focusMode = .autoFocus
+        captureDevice?.focusMode = .continuousAutoFocus
         captureDevice?.exposurePointOfInterest = itrPoint
-        captureDevice?.exposureMode = .autoExpose
+        captureDevice?.exposureMode = .continuousAutoExposure
         captureDevice?.unlockForConfiguration()
         focusAnimate(point: tapPoint)
     }

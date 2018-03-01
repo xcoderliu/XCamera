@@ -10,13 +10,29 @@ import UIKit
 import AVFoundation
 
 extension XCameraViewController {
+    
     func initFaceUI() {
         // 初始化 faceFrame 来突显 脸部
         faceFrameViews = []
     }
     
+    func setFaceEnable(enable: Bool) {
+        if bFace != enable {
+            bFace = enable
+            if !bFace
+            {
+                if ((self.faceFrameViews?.count) != nil)
+                {
+                    faceViewOut(faceViews: self.faceFrameViews!)
+                }
+            }
+        }
+    }
+    
     func handleFace (metaFaceObjs:[AVMetadataFaceObject]?) {
-        
+        if !bFace {
+            return
+        }
         var deleteViews = [UIViewFace]()
         var newfaceIDs = [Int]()
         for metaFaceObj in metaFaceObjs! {
@@ -40,7 +56,7 @@ extension XCameraViewController {
         }
     }
     
-    func handleFaceView(faceObj: AVMetadataFaceObject){
+    private func handleFaceView(faceObj: AVMetadataFaceObject){
         if ((faceFrameViews?.count) != nil) {
             for faceView in faceFrameViews!
             {
@@ -55,7 +71,7 @@ extension XCameraViewController {
         addFaceView(faceObj: faceObj)
     }
     
-    func addFaceView(faceObj: AVMetadataFaceObject) {
+    private func addFaceView(faceObj: AVMetadataFaceObject) {
         //add view
         let faceView = UIViewFace()
         faceView.layer.borderColor = UIColor.yellow.cgColor
@@ -74,7 +90,8 @@ extension XCameraViewController {
         updateFaceViewByMeta(faceView: faceView, faceObj: faceObj)
     }
     
-    func updateFaceViewByMeta(faceView: UIViewFace,faceObj: AVMetadataFaceObject) {
+    private func updateFaceViewByMeta(faceView: UIViewFace,faceObj: AVMetadataFaceObject) {
+                
         faceView.preCenter = CGPoint(x: (faceObj.bounds.origin.x) + (faceObj.bounds.size.width) / 2, y: (faceObj.bounds.origin.y) + (faceObj.bounds.size.height) / 2)
         
         DispatchQueue.main.async {
@@ -87,7 +104,7 @@ extension XCameraViewController {
         }
     }
     
-    func faceViewOut(faceViews:[UIViewFace])  {
+    private func faceViewOut(faceViews:[UIViewFace])  {
         for faceView in faceViews {
             DispatchQueue.main.async {
                 UIView.animate(withDuration: animateDuration, animations: {
@@ -105,5 +122,4 @@ extension XCameraViewController {
             }
         }
     }
-    
 }

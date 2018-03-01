@@ -17,6 +17,7 @@ let animateDuration = 0.2
 class XCameraViewController: UIViewController {
     //公共
     let disposeBag = DisposeBag()
+    let btnSetting = UIButton()
     var captureDevice: AVCaptureDevice?
     
     //avfoundation
@@ -35,10 +36,12 @@ class XCameraViewController: UIViewController {
     let nBtnCaptureRadius = 28
     
     //QR Code
+    var bQR = true
     let messageLabel = UILabel.init()
     var qrCodeFrameView: UIViewEx?
     
     // 脸部识别
+    var bFace = true
     var faceFrameViews: [UIViewFace]?
     
     override func viewDidLoad() {
@@ -105,6 +108,15 @@ class XCameraViewController: UIViewController {
         initQRView()
         initFaceUI()
         initFocus()
+        //btnsetting
+        btnSetting.setImage(#imageLiteral(resourceName: "img_btnSetting"), for: .normal)
+        self.view.addSubview(btnSetting)
+        btnSetting.snp.makeConstraints { (make) in
+            make.right.equalTo(self.view.snp.right).offset(-20)
+            make.top.equalTo(self.view.snp.top).offset(4)
+            make.width.equalTo(32)
+            make.height.equalTo(32)
+        }
     }
     
 }

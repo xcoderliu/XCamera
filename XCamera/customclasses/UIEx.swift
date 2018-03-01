@@ -15,5 +15,4 @@ class UIViewEx: UIView {
 class UIViewFace: UIViewEx {
     var faceID: Int = 0
     var labelTip: UILabel?
-    let imgTool = MLImageDetect()
 }

@@ -37,7 +37,23 @@ extension XCameraViewController {
         messageLabel.isHidden = true
     }
     
-    func handleQr(metadataObj: AVMetadataMachineReadableCodeObject?) {
+    func setQREnable(enable: Bool) {
+        if bQR != enable {
+            bQR = enable
+            if !bQR
+            {
+                qrViewOut()
+            }
+        }
+    }
+
+    
+     func handleQr(metadataObj: AVMetadataMachineReadableCodeObject?) {
+        if !bQR
+        {
+            return
+        }
+        
         if metadataObj != nil
         {
             let barCodeObject = videoPreviewLayer?.transformedMetadataObject(for: metadataObj!)
@@ -62,14 +78,11 @@ extension XCameraViewController {
         
     }
     
-    func qrViewOut() {
+    private func qrViewOut() {
         DispatchQueue.main.async {
             UIView.animate(withDuration: animateDuration, animations: {
-                if self.qrCodeFrameView?.frame.size.width != 0 && self.qrCodeFrameView?.frame.size.height != 0
-                {
-                    self.qrCodeFrameView?.frame = CGRect(x: (self.qrCodeFrameView?.preCenter.x)!, y: (self.qrCodeFrameView?.preCenter.y)!, width: 0, height: 0)
-                    self.messageLabel.isHidden = true
-                }
+                self.qrCodeFrameView?.frame = CGRect(x: (self.qrCodeFrameView?.preCenter.x)!, y: (self.qrCodeFrameView?.preCenter.y)!, width: 0, height: 0)
+                self.messageLabel.isHidden = true
             })
         }
     }

@@ -70,7 +70,7 @@ extension XCameraViewController {
     }
     
     private func handleFaceView(faceObj: AVMetadataFaceObject){
-        if ((faceFrameViews?.count) != nil) {
+        if (faceFrameViews?.count ?? 0 > 0) {
             for faceView in faceFrameViews!
             {
                 if faceView.faceID == faceObj.faceID

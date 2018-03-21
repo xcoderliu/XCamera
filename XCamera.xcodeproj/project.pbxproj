@@ -23,6 +23,7 @@
 		F81E3891204465D5006A2C76 /* CapturePhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81E3890204465D5006A2C76 /* CapturePhoto.swift */; };
 		F81E3894204469AB006A2C76 /* Face.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81E3893204469AB006A2C76 /* Face.swift */; };
 		F81E389620446B26006A2C76 /* XCaptureMetadataOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81E389520446B26006A2C76 /* XCaptureMetadataOutput.swift */; };
+		F834CD612054BF930011E62F /* ImageFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F834CD602054BF930011E62F /* ImageFilter.swift */; };
 		F8A2598B2046B2800041162E /* Focus.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A2598A2046B2800041162E /* Focus.swift */; };
 		F8A259A42047F1A50041162E /* MLImageDetect.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A259A22047F1A50041162E /* MLImageDetect.swift */; };
 		F8A259A52047F1A50041162E /* Inceptionv3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = F8A259A32047F1A50041162E /* Inceptionv3.mlmodel */; };
@@ -68,6 +69,7 @@
 		F81E3890204465D5006A2C76 /* CapturePhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapturePhoto.swift; sourceTree = "<group>"; };
 		F81E3893204469AB006A2C76 /* Face.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Face.swift; sourceTree = "<group>"; };
 		F81E389520446B26006A2C76 /* XCaptureMetadataOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCaptureMetadataOutput.swift; sourceTree = "<group>"; };
+		F834CD602054BF930011E62F /* ImageFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFilter.swift; sourceTree = "<group>"; };
 		F8A2598A2046B2800041162E /* Focus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Focus.swift; sourceTree = "<group>"; };
 		F8A259A22047F1A50041162E /* MLImageDetect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MLImageDetect.swift; sourceTree = "<group>"; };
 		F8A259A32047F1A50041162E /* Inceptionv3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Inceptionv3.mlmodel; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 				F8A2598A2046B2800041162E /* Focus.swift */,
 				F8A259A22047F1A50041162E /* MLImageDetect.swift */,
 				F8A259A32047F1A50041162E /* Inceptionv3.mlmodel */,
+				F834CD602054BF930011E62F /* ImageFilter.swift */,
 			);
 			path = functions;
 			sourceTree = "<group>";
@@ -351,6 +354,7 @@
 				F81E3883204301DB006A2C76 /* XCameraViewController.swift in Sources */,
 				F81E389620446B26006A2C76 /* XCaptureMetadataOutput.swift in Sources */,
 				F8A259A42047F1A50041162E /* MLImageDetect.swift in Sources */,
+				F834CD612054BF930011E62F /* ImageFilter.swift in Sources */,
 				F81E3894204469AB006A2C76 /* Face.swift in Sources */,
 				F81E388F204462B2006A2C76 /* QRCode.swift in Sources */,
 			);

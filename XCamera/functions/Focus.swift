@@ -31,6 +31,10 @@ extension XCameraViewController {
     }
     
     @objc func handleFocus(tap: UITapGestureRecognizer) {
+        if isFront
+        {
+            return
+        }
         //坐标系转换
         let tapPoint = tap.location(in:self.view)
         let itrPoint = CGPoint(x: tapPoint.y / self.view.bounds.size.height, y: 1 - tapPoint.x / self.view.bounds.size.width)

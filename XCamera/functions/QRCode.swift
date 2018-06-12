@@ -37,14 +37,19 @@ extension XCameraViewController {
         messageLabel.isHidden = true
     }
     
+    //QR功能开关
     func setQREnable(enable: Bool) {
         if bQR != enable {
             bQR = enable
             if !bQR
             {
-                qrViewOut()
+                clearQR()
             }
         }
+    }
+    
+    func clearQR() {
+        qrViewOut()
     }
     
     func checkQR(metadataObjects: [AVMetadataObject]) {

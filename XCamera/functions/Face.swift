@@ -16,17 +16,23 @@ extension XCameraViewController {
         faceFrameViews = []
     }
     
+    //脸部识别功能开关
     func setFaceEnable(enable: Bool) {
         if bFace != enable {
             bFace = enable
             if !bFace
             {
-                if ((self.faceFrameViews?.count) != nil)
-                {
-                    faceViewOut(faceViews: self.faceFrameViews!)
-                }
+                clearFace()
             }
         }
+    }
+    
+    func clearFace() {
+        if ((self.faceFrameViews?.count) != nil)
+        {
+            faceViewOut(faceViews: self.faceFrameViews!)
+        }
+
     }
     
     func checkFace(metadataObjects: [AVMetadataObject]) {

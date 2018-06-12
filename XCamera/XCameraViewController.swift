@@ -69,7 +69,6 @@ class XCameraViewController: UIViewController {
                 try? self?.captureDevice?.lockForConfiguration()
                 self?.captureDevice?.focusMode = .continuousAutoFocus
                 self?.captureDevice?.exposureMode = .continuousAutoExposure
-                self?.ca
                 self?.captureDevice?.unlockForConfiguration()
                 
                 //获取输入设备

@@ -22,7 +22,6 @@ class XCameraViewController: UIViewController {
     let btnCameraSwitch = UIButton()
     var isFront = false
     
-    
     var captureDevice: AVCaptureDevice?
     
     //avfoundation
@@ -43,12 +42,12 @@ class XCameraViewController: UIViewController {
     let nBtnCaptureRadius = 28
     
     //QR Code
-    var bQR = true
+    var bQR = false
     let messageLabel = UILabel.init()
     var qrCodeFrameView: UIViewEx?
     
     // 脸部识别
-    var bFace = true
+    var bFace = false
     var faceFrameViews: [UIViewFace]?
     
     override func viewDidLoad() {
@@ -92,7 +91,6 @@ class XCameraViewController: UIViewController {
                     self?.captureMetadataOutput?.metadataObjectTypes = self?.captureMetadataOutput?.availableMetadataObjectTypes
                 }
                 
-                print("test start");
                 self?.captureSession?.startRunning()
                 
                 DispatchQueue.main.async {
